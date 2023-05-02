@@ -1,0 +1,24 @@
+Read N strings and print the length of the largest string.
+CODE:
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    string str[n];
+    for(int i=0;i<n;i++){
+        cin>>str[i];
+    }
+    int maxi=INT_MIN;
+    for(int i=0;i<n;i++){
+        int l=str[i].length();
+        if(l>maxi){
+            maxi=l;
+        }
+    }
+    cout<< maxi;
+    return 0;
+}
